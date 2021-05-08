@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+:root{
+    --primer-color: #3c2313; 
+    --segundo-color: #F0A83E; 
+    --tercer-color: #8A8787;
+    --cuarto-color: #000000;
+    --color-tipografia: #FFFFFF;
+    --color-tipografia-hedertop: #F3F3F3;
+
+}
+
+
+a{
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+
+/*Header*/
+
+.header__top {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--cuarto-color);
+    color: var(--color-tipografia-hedertop);
+    font-size: 0.8rem;
+    padding: 10px 35px;
+}
+
+header div ul{
+    display: flex;
+    gap: 10px;
+}
+
+.header__bottom{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--segundo-color);
+    color: var(--color-tipografia);
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 30px 35px; 
+}
+
+.header__bottom nav ul li{
+    font-size: 1.3rem;
+    padding: 10px;
+}
+.header__bottom nav ul li a, .header__bottom div a{
+    color: var(--color-tipografia);
+}
+
+.iconosCompras li a{
+    color:var(--color-tipografia);
+    font-size: 2rem;
+    padding: 3px;
+}
+
+header span{
+    color: var(--primer-color);
+    font-weight: 700;
+}
+
+#kangreburger{
+    display: none;
+}
+
+/*Main*/
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 10vh ;
+    width: 43vw;
+    
+
+}
+
+.contenedor h2{
+    color: var(--primer-color);
+    font-size: 2.5rem;
+    font-weight: 700;
+    padding: 1vh 0;
+   
+}
+form{
+    width: 100%;
+}
+
+.contenido{
+    display: flex;
+    flex-direction: column;
+
+}
+.contenido input{
+    background-color: var(--primer-color);
+    border-radius: 15px;
+    border: none;
+    margin: 1vh 0;
+    outline: none;
+    padding: 2vh;
+    
+    
+}
+::placeholder{
+    color: var(--color-tipografia);
+    font-size: 0.6rem;
+    font-weight: 400;
+
+}
+
+.botones{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 6vh 0;
+}
+
+.botones input[type="submit"]{
+    background-color: var(--segundo-color);
+    border:none;
+    border-radius: 15px;
+    color: black;
+    font-size: 1.3rem;
+    font-weight: 700;
+    outline: none;
+    padding: 10px 35px;
+
+}
+
+.botones input[type="reset"]{
+    background-color: var(--tercer-color);
+    border:none;
+    border-radius: 15px;
+    color: black;
+    font-size: 1.3rem;
+    font-weight: 700;
+    outline: none;
+    padding: 10px 25px;
+
+}
+
+/*Footer*/
+
+.footer__top{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primer-color);
+    padding: 30px 35px;
+    
+}
+.contacto{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.listContacto{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+}
+
+.uno{
+    color: var(--color-tipografia);
+    font-size: 1.8rem;
+}
+
+.dos{
+    color: var(--tercer-color);
+    font-size: 0.8;
+}
+
+
+/*.localidad dl{
+    color: var(--color-tipografia);
+}
+
+.localidad dl dt{
+    font-size: 1.5rem;
+}
+
+.localidad dl dd{
+    font-size: 0.8rem;
+    color: #8A8787;
+    margin-left: 50px;
+
+}*/
+
+.footer__top h2{
+    color: var(--color-tipografia);
+    font-size: 2.5rem;
+    font-weight: 700;
+    padding: 1vh 0;
+
+}
+.footer__top span{
+    color: var(--segundo-color);
+    font-weight: 700;
+}
+.logoYredes{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap:10px
+
+}
+
+.redes { 
+    display: flex;
+    flex-direction: row;
+    gap:10px
+
+}
+
+#youtube{
+    height: 37px;
+    width: 37px;
+}
+
+.footer__bottom{
+    background-color: var(--cuarto-color);
+    color: var(--color-tipografia);
+    text-align: center;
+}
+.footer__bottom p{
+    padding: 10px;
+    font-weight: 400;
+    font-size: 00.8rem;
+
+}
+
+/*Mobile*/
+@media screen and (max-width:780px){
+    
+    .header__bottom nav ul li, .header__bottom ul{
+        display: none;
+    }
+    #kangreburger{
+        display: block;
+        font-size: 1rem;
+    }
+
+    .header__top, .header__bottom{
+        font-size: 0.6rem;
+        padding: 10px 10px;
+    }
+    .contenedor{
+        padding: 10%;
+        width: 100vw;
+    }
+        
+    .footer__top{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    
+    .uno{
+        font-size: 1.5rem;
+    }
+    .logoYredes{
+        display: flex;
+        align-items: center;
+        padding-top: 30px;
+    }
+
+    .titulo h2{
+        font-size: 2.3rem ;
+    }
+
+    .footer__bottom p{
+        font-size: 0.6rem;
+    }
+
+
+
+    
+
+    
+}
+
